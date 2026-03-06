@@ -1,0 +1,255 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fiche de renseignements candidat - CDENE</title>
+  <link rel="stylesheet" href="candidat.css">
+</head>
+<body>
+  <div class="form-card">
+    <form id="formMateriel" class="bloc-formulaire" style="display:block;">
+      <div class="pdf-page">
+        <div id="enTetePDF">
+          <div class="enTete-grid">
+            <div class="two-col">
+              <div class="enTete-logo">
+                <img src="https://pfst.cf2.poecdn.net/base/image/6d4995a47e5cf7a45172847ef067170a998ddf965eb35e3c6cf41c542b15c373?w=600&h=238" alt="Logo CDENE">
+              </div>
+              <div class="enTete-contact">
+                <span>✉️ info@cdene.ns.ca</span>
+                <span>☎️ 902-422-2752</span>
+              </div>
+            </div>
+            <h2 class="enTete-titre">Fiche de renseignements candidat - CDENE</h2>
+            <p class="enTete-instructions">
+              Chacune des candidatures sera étudiée confidentiellement en fonction de nos besoins actuels et futurs. Les champs EDI sont facultatifs et confidentiels.
+            </p>
+          </div>
+        </div>
+        <h2>Candidature au poste de :</h2>
+        <div class="field"><input type="text" name="poste_vise" placeholder="Titre du poste"></div>
+        <h2>Renseignements personnels</h2>
+        <div class="grid personal-grid">
+          <div class="field"><label>Nom de famille</label><input type="text" name="nom" placeholder="Entrez votre nom"></div>
+          <div class="field"><label>Prénom</label><input type="text" name="prenom" placeholder="Entrez votre prénom"></div>
+          <div class="field"><label>Email</label><input type="email" name="email" placeholder="exemple@courriel.com"></div>
+          <div class="field"><label>Adresse (App. N°./ rue)</label><input type="text" name="adresse" placeholder="Adresse complète"></div>
+          <div class="field"><label>Ville, Province, Code postal</label><input type="text" name="ville" placeholder="Ville"></div>
+          <div class="field"><label>Téléphone(Cellulaire)</label><input type="text" name="telephone" placeholder="Numéro de téléphone"></div>
+        </div>
+        <div class="radio-block">
+          <label>Avez vous le droit de travailler au Canada ?</label>
+          <div class="inline-options">
+            <label><input type="radio" name="droit_travail" value="Oui"> Oui</label>
+            <label><input type="radio" name="droit_travail" value="Non"> Non</label>
+          </div>
+          <div class="grid">
+            <div class="field" style="margin-top:10px;">
+              <label>Veuillez préciser votre statut :</label>
+              <input type="text" name="statut_travail" placeholder="Précisez le statut">
+            </div>
+            <div class="field" style="margin-top:10px;">
+              <label>Date d'expiration (si applicable) :</label>
+              <input type="date" name="statut_expiration">
+            </div>
+          </div>
+        </div>
+        <h2>Études et formation</h2>
+        <div class="edu-list">
+          <div class="edu-item">
+            <div class="edu-title">Secondaires</div>
+            <div class="edu-fields soft-field-grid">
+              <div class="field"><label>Diplôme obtenu</label><input type="text" name="sec_diplome" placeholder="Ex : Diplôme d'études secondaires"></div>
+              <div class="field"><label>Concentration</label><input type="text" name="sec_concentration" placeholder="Ex : Sciences, Lettres"></div>
+              <div class="field"><label>Année d'obtention</label><input type="date" name="sec_annee"></div>
+            </div>
+          </div>
+          <div class="edu-item">
+            <div class="edu-title">Formation professionnelle</div>
+            <div class="edu-fields soft-field-grid">
+              <div class="field"><label>Diplôme obtenu</label><input type="text" name="pro_diplome" placeholder="Ex : DEP"></div>
+              <div class="field"><label>Concentration</label><input type="text" name="pro_concentration" placeholder="Ex : Comptabilité"></div>
+              <div class="field"><label>Année d'obtention</label><input type="date" name="pro_annee"></div>
+            </div>
+          </div>
+          <div class="edu-item">
+            <div class="edu-title">Collégial / Universitaire</div>
+            <div class="edu-fields soft-field-grid">
+              <div class="field"><label>Diplôme obtenu</label><input type="text" name="col_diplome" placeholder="Ex : Baccalauréat"></div>
+              <div class="field"><label>Concentration</label><input type="text" name="col_concentration" placeholder="Ex : Administration"></div>
+              <div class="field"><label>Année d'obtention</label><input type="date" name="col_annee"></div>
+            </div>
+          </div>
+          <div class="edu-item">
+            <div class="edu-title">Autres</div>
+            <div class="edu-fields soft-field-grid">
+              <div class="field"><label>Diplôme obtenu</label><input type="text" name="autre_diplome" placeholder="Autre diplôme"></div>
+              <div class="field"><label>Concentration</label><input type="text" name="autre_concentration" placeholder="Préciser"></div>
+              <div class="field"><label>Année d'obtention</label><input type="date" name="autre_annee"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="pdf-page">
+        <div class="page-mini-header">
+          <div class="enTete-logo">
+            <img src="https://pfst.cf2.poecdn.net/base/image/6d4995a47e5cf7a45172847ef067170a998ddf965eb35e3c6cf41c542b15c373?w=600&h=238" alt="Logo CDENE">
+          </div>
+          <div class="enTete-contact">
+            <span>✉️ info@cdene.ns.ca</span>
+            <span>☎️ 902-422-2752</span>
+          </div>
+        </div>
+        <h2 class="section-title-large">Expérience professionnelle</h2>
+        <div class="exp-table-wrap">
+          <table class="exp-table">
+            <thead>
+              <tr><th>Poste occupé</th><th>Employeur et adresse</th><th>Téléphone</th><th>Période</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><textarea name="exp_poste1" placeholder="Titre du poste"></textarea></td>
+                <td>
+                  <div class="stacked soft-field-stack">
+                    <input type="text" name="exp_employeur1" placeholder="Nom de l'employeur">
+                    <input type="text" name="exp_adresse1" placeholder="Adresse de l'employeur">
+                  </div>
+                </td>
+                <td><input type="text" name="exp_telephone1" placeholder="902-555-1234"></td>
+                <td>
+                  <div class="period-grid soft-field-stack">
+                    <div class="field"><label>Début</label><input type="date" name="exp_date_debut1"></div>
+                    <div class="field"><label>Fin</label><input type="date" name="exp_date_fin1"></div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td><textarea name="exp_poste2" placeholder="Titre du poste"></textarea></td>
+                <td>
+                  <div class="stacked soft-field-stack">
+                    <input type="text" name="exp_employeur2" placeholder="Nom de l'employeur">
+                    <input type="text" name="exp_adresse2" placeholder="Adresse de l'employeur">
+                  </div>
+                </td>
+                <td><input type="text" name="exp_telephone2" placeholder="902-555-1234"></td>
+                <td>
+                  <div class="period-grid soft-field-stack">
+                    <div class="field"><label>Début</label><input type="date" name="exp_date_debut2"></div>
+                    <div class="field"><label>Fin</label><input type="date" name="exp_date_fin2"></div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td><textarea name="exp_poste3" placeholder="Titre du poste"></textarea></td>
+                <td>
+                  <div class="stacked soft-field-stack">
+                    <input type="text" name="exp_employeur3" placeholder="Nom de l'employeur">
+                    <input type="text" name="exp_adresse3" placeholder="Adresse de l'employeur">
+                  </div>
+                </td>
+                <td><input type="text" name="exp_telephone3" placeholder="902-555-1234"></td>
+                <td>
+                  <div class="period-grid soft-field-stack">
+                    <div class="field"><label>Début</label><input type="date" name="exp_date_debut3"></div>
+                    <div class="field"><label>Fin</label><input type="date" name="exp_date_fin3"></div>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2>Informations supplémentaires (jugées importantes)</h2>
+        <textarea name="notes_experience" placeholder="Ajoutez ici toute note importante liée aux expériences professionnelles..."></textarea>
+      </div>
+
+      <div class="pdf-page">
+        <h2>Auto-déclaration (EDI)</h2>
+        <p class="edi-intro">Les questions suivantes sont facultatives, confidentielles et n’ont aucune incidence sur le processus d’embauche. Elles sont utilisées uniquement à des fins statistiques afin de soutenir l’équité en emploi.</p>
+        <p class="edi-intro">Veuillez cocher les cases qui s’appliquent à vous :</p>
+
+        <div class="radio-block">
+          <label>1. Genre : (<span style="font-style: italic; font-weight: normal;"> En vertu de la Loi sur l’équité en matière d’emploi, les femmes font partie d’un groupe désigné.</span>)</label>
+          <label>Est-ce que vous vous désignez comme étant une femme ?</label>
+          <div class="two-col edi-two-col">
+            <div>
+              <div class="inline-options">
+                <label><input type="radio" name="edi_femme" value="Non"> Non</label>
+                <label><input type="radio" name="edi_femme" value="Oui"> Oui</label>
+              </div>
+            </div>
+            <div class="field"><label>(<span style="font-style: italic; font-weight: normal;">Si non, veuillez préciser (facultatif).</span>)</label><input type="text" name="genre_details"></div>
+          </div>
+        </div>
+
+        <div class="radio-block">
+          <label>2. Autochtones : (<span style="font-style: italic; font-weight: normal;">Un Autochtone est une personne appartenant au groupe des Indiens de l’Amérique du Nord, à une Première Nation, ou encore une personne Métisse ou Inuite. Les termes « Indien de l’Amérique du Nord » et « Première Nation » désignent les Indiens inscrits, les Indiens non inscrits ainsi que les Indiens visés par un traité.</span>)</label>
+          <label>Êtes-vous Autochtone ?</label>
+          <div class="two-col edi-two-col">
+            <div>
+              <div class="inline-options">
+                <label><input type="radio" name="edi_autochtone" value="Non"> Non</label>
+                <label><input type="radio" name="edi_autochtone" value="Oui"> Oui</label>
+              </div>
+            </div>
+            <div class="field"><label>(<span style="font-style: italic; font-weight: normal;">Si vous souhaitez, précisez le groupe dont vous faites partie. dans le champ ci‑dessous.</span>)</label><input type="text" name="autochtone_details"></div>
+          </div>
+        </div>
+
+        <div class="radio-block">
+          <label>3. Minorité visible : (<span style="font-style: italic; font-weight: normal;">Un membre d’une minorité visible au Canada est une personne (autre qu’un Autochtone, selon la définition précisée à la section ci-dessus) qui n’est pas de race blanche ou de peau blanche, quel que soit le lieu de naissance.</span>)</label>
+          <label> Êtes-vous membre d’un groupe de minorité visible ?</label>
+          <div class="two-col edi-two-col">
+            <div>
+              <div class="inline-options">
+                <label><input type="radio" name="edi_minorite" value="Non"> Non</label>
+                <label><input type="radio" name="edi_minorite" value="Oui"> Oui</label>
+              </div>
+            </div>
+            <div class="field"><label>(<span style="font-style: italic; font-weight: normal;">Si vous souhaitez préciser, indiquez l’élément qui correspond le mieux à votre origine dans le champ ci‑dessous.</span>)</label><input type="text" name="minorite_details"></div>
+          </div>
+        </div>
+
+        <div class="radio-block">
+          <label>4. Personne handicapée (<span style="font-style: italic; font-weight: normal;">Une personne handicapée est une personne qui a une déficience durable ou récurrente soit de sa capacité physique, mentale ou sensorielle, soit d’ordre psychiatrique ou en matière d’apprentissage</span>)</label>
+          <label> Avez-vous un handicap ?</label>
+          <div class="two-col edi-two-col">
+            <div>
+              <div class="inline-options">
+                <label><input type="radio" name="edi_handicap" value="Non"> Non</label>
+                <label><input type="radio" name="edi_handicap" value="Oui"> Oui</label>
+              </div>
+            </div>
+            <div class="field"><label>(<span style="font-style: italic; font-weight: normal;">Veuillez préciser, si vous souhaitez fournir plus de détails : </span>)</label><input type="text" name="handicap_details"></div>
+          </div>
+        </div>
+
+        <h2>Déclaration du postulant</h2>
+        <p class="edi-intro">Je déclare que tous les renseignements contenus dans ce formulaire sont véridiques et complets. Je suis
+conscient que toute information fausse ou inexacte pourrait entraîner le rejet de ma candidature.
+J’autorise le CDÉNÉ à procéder aux vérifications d’usage dans le cadre de l’évaluation de ma candidature.</p>
+
+        <div class="two-col">
+          <div>
+            <label>Signature de l'employé</label><input type="text" id="signatureEmployeur1" placeholder="Nom / signature">
+          </div>
+          <div>
+            <label>Date de signature</label><input type="date" name="date_signature"id="signatureEmploye1" placeholder="date de signature">
+          </div>
+        </div>
+
+
+        <h2>Espace réservé à l'employeur</h2>
+        <textarea name="notes" placeholder="Ajoutez vos notes ici..."></textarea>
+      </div>
+
+      <button type="button" id="btnDownloadPDF" class="btn-submit" onclick="generatePdf()">TÉLÉCHARGER LE PDF</button>
+    </form>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="candidat.js"></script>
+</body>
+</html>
