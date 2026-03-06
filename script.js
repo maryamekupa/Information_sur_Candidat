@@ -79,8 +79,42 @@ function clearEmptyPlaceholdersForPdf(root) {
 function getJsPDFCtor() {
   return window.jspdf?.jsPDF || window.jsPDF || window.jsPDF?.jsPDF || window.jspdf?.default?.jsPDF;
 }
+let isPdfGenerating = false;
+
+function setPdfLoading(isLoading) {
+  let overlay = document.getElementById('pdfLoadingOverlay');
+  if (!overlay) {
+    overlay = document.createElement('div');
+    overlay.id = 'pdfLoadingOverlay';
+    overlay.style.position = 'fixed';
+    overlay.style.inset = '0';
+    overlay.style.background = 'rgba(0, 0, 0, 0.25)';
+    overlay.style.display = 'none';
+    overlay.style.alignItems = 'center';
+    overlay.style.justifyContent = 'center';
+    overlay.style.zIndex = '9999';
+
+    const box = document.createElement('div');
+    box.style.background = '#ffffff';
+    box.style.color = '#003a70';
+    box.style.padding = '14px 18px';
+    box.style.borderRadius = '8px';
+    box.style.border = '2px solid #6885a5';
+    box.style.fontWeight = '700';
+    box.textContent = 'Veuillez patienter, telechargement du PDF en cours...';
+    overlay.appendChild(box);
+    document.body.appendChild(overlay);
+  }
+
+  overlay.style.display = isLoading ? 'flex' : 'none';
+  const btn = document.getElementById('btnDownloadPDF');
+  if (btn) btn.disabled = isLoading;
+}
 
 async function generatePdf() {
+  if (isPdfGenerating) return;
+  isPdfGenerating = true;
+  setPdfLoading(true);
   let wrapper = null;
   try {
     const jsPDF = getJsPDFCtor();
@@ -163,6 +197,8 @@ async function generatePdf() {
     alert('Erreur lors de la generation du PDF: ' + error.message);
   } finally {
     if (wrapper) wrapper.remove();
+    setPdfLoading(false);
+    isPdfGenerating = false;
   }
 }
 
